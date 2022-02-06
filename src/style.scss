@@ -1,0 +1,357 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+body {
+    background:radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+    background-position: bottom;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    height: 100vh;
+}
+
+
+
+.grid {
+    max-width: 1366px;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 10rem;
+    padding: 2rem;
+}
+
+.score {
+    width: 80%;
+    max-width: 700px;
+    justify-self: center;
+    align-self: center;
+    border: 3px solid hsl(217, 16%, 45%);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    flex-wrap: wrap;
+}
+
+.title {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title p {
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #ffffff;
+    line-height: 0.9;
+}
+
+.score-box {
+    border-radius: 10px;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 3rem;
+}
+
+.score-box-title {
+    text-transform: uppercase;
+    color: hsl(229, 25%, 31%);
+    font-size: 1.3rem;
+}
+
+.score-box-score {
+    color: hsl(229, 64%, 46%);
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.icons {
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "first second"
+    "third third";
+    grid-row-gap: 1.5rem;
+    grid-column-gap: 5rem;
+    position: relative;
+    
+}
+
+.icons2 {
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "your-choice computer-choice"
+    "reset reset";
+    grid-row-gap: 8rem;
+    grid-column-gap: 5rem;
+    position: relative;
+}
+
+.your-choice-container {
+    grid-area: your-choice;
+}
+
+.computer-choice-container {
+    grid-area: computer-choice;
+}
+
+.choice-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+.reset {
+    grid-area: reset;
+    justify-self: center;
+}
+
+.reset-btn {
+    color: hsl(229, 25%, 31%);
+    border: 1px solid hsl(217, 16%, 45%);
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    text-align: center;
+    display: inline-block;
+    justify-self: center;
+    padding: 2rem 1rem;
+    cursor: pointer;
+    margin-top: 3rem;
+    min-width: 225px;
+    background: #ffffff;
+    transition: 0.4s;
+}
+
+.reset-btn:hover {
+    background: hsl(217, 16%, 45%);
+    color: #ffffff;
+}
+
+.win-or-lose {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 4rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.triangle {
+    position: absolute;
+    z-index: -2;
+    bottom: -0.5rem;
+    right: 1.2rem;
+    
+}
+
+.circle {
+
+    width: 140px;
+    height: 140px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.white {
+    width: 100px;
+    height: 100px;
+    background: #ffffff;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.black {
+    width: 110px;
+    height: 110px;
+    background: rgba($color: #000000, $alpha: 0.6);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.computer-choice {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+
+.first {
+    grid-area: first;
+    justify-content: start;
+}
+
+.second {
+    grid-area: second;
+}
+
+.third {
+    grid-area: third;
+    justify-self: center;
+}
+
+.paper {
+    
+    background: radial-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+}
+
+.scissors {
+  
+    background: radial-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+}
+
+.rock {
+
+    background: radial-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+    justify-self: center;
+}
+
+
+
+
+.rules-btn {
+    border: 1px solid hsl(217, 16%, 45%);
+    border-radius: 10px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    text-align: center;
+    display: inline-block;
+    justify-self: center;
+    padding: 1rem 4rem;
+    cursor: pointer;
+    margin-top: 3rem;
+    min-width: 127px;
+
+}
+
+
+.rules {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    padding-top: 10rem;
+    margin: 0 auto;
+  
+}
+
+.rules-container {
+    max-width: 40rem;
+    margin: 0 auto;
+    background: #fff;
+}
+
+.rules-title {
+    text-align: center;
+    color: hsl(229, 25%, 31%);
+    font-size: 3.3rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.rules-image {
+    margin: 10rem auto 10rem auto;
+}
+
+.rules-close {
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.rules-title, .rules-image, .rules-close {
+    display: block;
+    
+}
+
+.hide {
+    display: none;
+}
+
+.footer {
+    
+    margin: 0 auto;
+    text-align: center;
+    color: #ffffff;
+    padding: 2rem;
+    font-size: calc(0.5rem + 0.5vw);
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+   
+    a {
+        color: #fff;
+        font-weight: 700;
+    }
+}
+
+@media(min-width: 770px) {
+    
+    .rules {
+        background: rgba($color: #000000, $alpha: 0.6);
+    
+        
+    
+    }
+
+    .rules-container {
+        border-radius: 10px;
+        background: #fff;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 3.3rem;
+
+
+    }
+
+    .rules-title {
+        text-align: left;
+        grid-column: 1 / 2;
+  
+    }
+    
+    .rules-image {
+        margin: 5rem 0 0 0;
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
+        justify-self: center;
+    }
+    
+    .rules-close {
+        grid-column: 2 / 3;
+        margin: 0;
+        cursor: pointer;
+        justify-self: end;
+        align-self: center;
+    }
+
+    
+}
+
+@media(min-width: 1200px) {
+    .rules-btn {
+        justify-self: end;
+    }
+
+    
+}
