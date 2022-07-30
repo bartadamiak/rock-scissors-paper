@@ -1,6 +1,6 @@
 Challange from https://frontendmentor.io/
 
 
-Moja wersja: http://bartadamiak.site/rock-paper-scissors/
+Moja wersja: http://bartadamiak.biz.pl/rock-paper-scissors/
 
 
